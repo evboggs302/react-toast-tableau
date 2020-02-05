@@ -17,6 +17,8 @@ function App() {
     return toast.error("ERROR HANDLING MESSAGE", { toastId: "err" });
   };
 
+  console.log("this is working as desred");
+
   return (
     <div className="App">
       <ToastContainer
