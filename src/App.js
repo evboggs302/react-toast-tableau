@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TableauSample from "./Vizz";
 
 function App() {
   const notifyA = () => {
@@ -37,9 +38,7 @@ function App() {
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <TableauSample />
         <button onClick={() => notifyA()}>Notify A !</button>
         <button onClick={() => toast.dismiss("A")}>DISMISS</button>
         <br />
