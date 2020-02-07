@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import tableau from "tableau-api";
+import "tableau-api";
 
 class Test extends Component {
   componentDidMount() {
@@ -15,11 +15,13 @@ class Test extends Component {
 
   render() {
     return (
-      <div
-        ref={div => {
-          this.vizContainer = div;
-        }}
-      ></div>
+      <div>
+        <div
+          ref={div => {
+            this.vizContainer = div;
+          }}
+        ></div>
+      </div>
     );
   }
 }

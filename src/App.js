@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import TableauSample from "./Vizz";
+import TableauClass from "./VizzClass";
+import TableauFunc from "./VizzFunc";
 
 function App() {
   const notifyA = () => {
@@ -38,7 +39,10 @@ function App() {
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <TableauSample />
+        <TableauClass />
+        <br />
+        <TableauFunc />
+        <br />
         <button onClick={() => notifyA()}>Notify A !</button>
         <button onClick={() => toast.dismiss("A")}>DISMISS</button>
         <br />
