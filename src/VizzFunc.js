@@ -6,12 +6,14 @@ function Test2() {
     initViz2();
   }, []);
 
+  var viz, workbook, sheet;
+
   const initViz2 = () => {
     const vizUrl =
       "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const vizContainer = document.getElementById("vizContainer");
-    // let viz = new window.tableau.Viz(vizContainer, vizUrl);
-    new window.tableau.Viz(vizContainer, vizUrl);
+    let viz = new window.tableau.Viz(vizContainer, vizUrl);
+    // new window.tableau.Viz(vizContainer, vizUrl);
   };
 
   return (
