@@ -3,6 +3,9 @@ import "tableau-api";
 
 class Test extends Component {
   componentDidMount() {
+    this.state = {
+      viz: ""
+    };
     this.initViz();
   }
 
@@ -10,7 +13,7 @@ class Test extends Component {
     const vizUrl =
       "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const vizContainer = this.vizContainer;
-    let viz = new window.tableau.Viz(vizContainer, vizUrl);
+    this.state.viz = new window.tableau.Viz(vizContainer, vizUrl);
   }
 
   render() {

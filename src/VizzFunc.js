@@ -4,6 +4,9 @@ import "tableau-api";
 function Test2() {
   useEffect(() => {
     initViz2();
+    return () => {
+      viz.dismiss();
+    };
   }, []);
 
   var viz, workbook, sheet;
@@ -12,8 +15,7 @@ function Test2() {
     const vizUrl =
       "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const vizContainer = document.getElementById("vizContainer");
-    let viz = new window.tableau.Viz(vizContainer, vizUrl);
-    // new window.tableau.Viz(vizContainer, vizUrl);
+    viz = new window.tableau.Viz(vizContainer, vizUrl);
   };
 
   return (
