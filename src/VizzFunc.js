@@ -11,11 +11,17 @@ function Test2() {
 
   var viz, workbook, sheet;
 
+  var options = {
+    // height: auto,
+    // width: auto
+    // filter_name: filter_value
+  };
+
   const initViz2 = () => {
     const vizUrl =
       "http://public.tableau.com/views/RegionalSampleWorkbook/Storms";
     const vizContainer = document.getElementById("vizContainer");
-    viz = new window.tableau.Viz(vizContainer, vizUrl);
+    viz = new window.tableau.Viz(vizContainer, vizUrl, options);
   };
 
   return (
